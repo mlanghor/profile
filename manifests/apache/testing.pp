@@ -1,4 +1,6 @@
 class role::apache::testing {
-  $base_dir = /app/apache
-  include apache_testing
+
+  class { apache_testing:
+    $base_dir = /app/apache
+  }
 }
