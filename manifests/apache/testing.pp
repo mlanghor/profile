@@ -1,4 +1,5 @@
 class profile::apache::testing {
-  $base_dir = '/app/apache'
-  include apache_test
+  class { apache_test:
+    $base_dir => '/app/apache'
+  }
 }
