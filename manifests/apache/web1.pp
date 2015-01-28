@@ -9,6 +9,6 @@ class profile::apache::web1 {
     instance_name => $instance_name,
   }
 
-  #  $web1_vhosts = hiera_hash('apache_web1::ssl_vhost',{})
-  #  create_resources('apache_test::ssl_vhost',$web1_vhosts)
+  $web1_vhosts = hiera_hash('apache_web1::ssl_vhost',{})
+  create_resources('apache_test::ssl_vhost',$web1_vhosts)
 }
